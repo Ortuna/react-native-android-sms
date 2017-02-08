@@ -46,10 +46,10 @@ public class SmsModule extends ReactContextBaseJavaModule /*implements LoaderMan
     private Map<Long, String> smsList;
     private Map<Long, Object> smsListBody;
     Activity mActivity = null;
-    public SmsModule(ReactApplicationContext reactContext, Activity activity)
+    public SmsModule(ReactApplicationContext reactContext)
     {
         super(reactContext);
-        mActivity = activity;
+        mActivity = new Activity();
         smsList = new HashMap<Long, String>();
     }
 
@@ -146,7 +146,7 @@ public class SmsModule extends ReactContextBaseJavaModule /*implements LoaderMan
 
         return json;
     }
-    
+
     @ReactMethod
     public void send(String addresses, String text, final Callback errorCallback, final Callback successCallback) {
       try {
@@ -181,12 +181,7 @@ public class SmsModule extends ReactContextBaseJavaModule /*implements LoaderMan
             errorCallback.invoke(e.getMessage());
             return;
         }
-      
-      
+
+
   }
 }
-
-
-
-
-
