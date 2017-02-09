@@ -16,11 +16,11 @@
     "android"
   ],
   "author": {
-    "name": "Mohammed Makhlouf",
-    "email": "msmakhlouf@gmail.com"
+    "name": "Sumeet Singh",
+    "email": "ortuna@gmail.com"
   },
   "peerDependencies": {
-    "react-native": ">= 0.11.0"
+    "react-native": "0.40.0"
   },
   "license": "MIT",
   "bugs": {
